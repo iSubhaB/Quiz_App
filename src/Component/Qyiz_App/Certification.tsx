@@ -25,7 +25,7 @@ export const Certification = () => {
   };
 
   return (
-    <div className="container mt-5" >
+    <div className="container mt-5" style={{position:"absolute", left:350, top:0}}>
       {!submitted ? (
         < >
           <h2 className="mb-4">Certificate Form</h2>

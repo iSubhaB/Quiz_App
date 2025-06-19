@@ -28,7 +28,7 @@ export const Quiz_App = () => {
   };
 
   return (
-    <div className="quiz-background container-fluid d-flex align-items-center justify-content-center min-vh-100">
+    <div className="quiz-background container-fluid d-flex align-items-center justify-content-center min-vh-100" style={{position:"absolute", left:0, top:0, right:0}}>
       <div className="quiz-card card text-light shadow-lg p-5 rounded-4" style={{ maxWidth: "700px", width: "100%" }}>
         <div className="card-body text-center">
           <h1 className="card-title fw-bold mb-4 display-5 text-warning">
