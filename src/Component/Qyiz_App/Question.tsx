@@ -38,29 +38,40 @@ export const Question_Quiz = () => {
       });
   }, [catagory]);
 
+
+
   const handleSelection = (questionIndex: number, option: string) => {
-    setSelectedValues((prev) => ({
-      ...prev,
-      [questionIndex]: option,
-    }));
-  };
+  setSelectedValues({
+    ...selectedValues,
+    [questionIndex]: option,
+  });
+};
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    let score = 0;
-    shuffledQuestions.forEach((question, index) => {
-      if (selectedValues[index] === question.correct_answer) {
-        score++;
-      }
-    });
-    setScore(score);
+ const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
 
-    if (score >= 8) {
-      setMessage(`Your score is - ${score} / 10. 🎉 Great job — you passed!`);
-    } else {
-      setMessage(`Your score is - ${score} / 10. ❌ Sorry — you did not pass. Try again!`);
+  // Check if any question is unanswered
+   const unanswered = shuffledQuestions.some((_, index) => !selectedValues[index]);
+  if (unanswered) {
+    setMessage("⚠️ Please answer all questions before submitting.");
+    return;
+  }
+
+  let score = 0;
+  shuffledQuestions.forEach((question, index) => {
+    if (selectedValues[index] === question.correct_answer) {
+      score++;
     }
-  };
+  });
+  setScore(score);
+
+  if (score >= 8) {
+    setMessage(`Your score is - ${score} / 10. 🎉 Great job — you passed!`);
+  } else {
+    setMessage(`Your score is - ${score} / 10. ❌ Sorry — you did not pass. Try again!`);
+  }
+};
+
 
   const BackPage = () => {
     window.history.back();
