@@ -1,0 +1,103 @@
+/* Background Styling */
+.quiz-background {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  background-size: cover;
+  padding: 60px 30px;
+}
+
+/* Card Styling (Bigger Size) */
+.quiz-card {
+  width: 100%;
+  max-width: 1000px; /* Increased width */
+  background: rgba(20, 20, 20, 0.95);
+  border: 3px solid #6c63ff;
+  border-radius: 2rem;
+  box-shadow: 0 0 40px rgba(108, 99, 255, 0.4);
+  padding: 60px 50px;
+  font-size: 1.5rem;
+}
+
+/* Title Styling */
+.quiz-card h1 {
+  font-size: 3rem;
+}
+
+/* Paragraph */
+.quiz-card p {
+  font-size: 1.4rem;
+}
+
+/* Select Dropdown */
+.form-select {
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  border-radius: 0.75rem;
+}
+
+label.form-label {
+  font-size: 1.3rem;
+}
+
+/* Start Button */
+.btn-outline-light {
+  font-size: 1.3rem;
+  padding: 0.75rem 2.5rem;
+  border-width: 2px;
+}
+
+/* Confirmation Box (Larger) */
+.confirmation-box {
+  animation: fadeInUp 0.4s ease-in-out;
+  padding: 2rem;
+  font-size: 1.3rem;
+  border: 3px solid #6c63ff;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+/* Confirmation Buttons */
+.confirmation-box .btn {
+  font-size: 1.2rem;
+  padding: 0.6rem 2rem;
+}
+
+/* Hover Effects */
+.btn-outline-light:hover {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+  .quiz-card {
+    padding: 2rem 1rem;
+    font-size: 1.1rem;
+  }
+
+  .quiz-card h1 {
+    font-size: 2rem;
+  }
+
+  .confirmation-box {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
+
+  .confirmation-box .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+}

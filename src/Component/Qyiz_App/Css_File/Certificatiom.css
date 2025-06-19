@@ -1,0 +1,121 @@
+/* General container */
+.container {
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
+}
+
+/* Form styles */
+form {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+input, textarea {
+  border: 1px solid #ced4da;
+}
+
+input:focus, textarea:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Certificate styles */
+.certificate {
+  background: linear-gradient(to bottom right, #ffffff, #f3f3f3);
+  border: 6px double #343a40;
+  padding: 40px;
+  font-family: 'Georgia', serif;
+  color: #000;
+  position: relative;
+}
+
+.certificate h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.certificate .lead {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.display-4 {
+  font-size: 3rem;
+  color: #28a745;
+  font-weight: 600;
+}
+
+.certificate em {
+  font-style: italic;
+  color: #555;
+}
+
+.certificate strong {
+  font-weight: 600;
+  color: #111;
+}
+
+.certificate p {
+  font-size: 1rem;
+}
+
+/* Print button */
+.text-center button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.text-center button:hover {
+  background-color: #495057;
+}
+
+/* Print view optimization */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .certificate, .certificate * {
+    visibility: visible;
+  }
+
+  .certificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+
+  .text-center button {
+    display: none;
+  }
+}
