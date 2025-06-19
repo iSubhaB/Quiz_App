@@ -2,36 +2,55 @@
 .container {
   max-width: 800px;
   margin: auto;
+  padding: 2rem 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #212529;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Form styles */
+/* Flex form container */
 form {
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-label {
   font-weight: 500;
 }
 
-input, textarea {
+input,
+textarea {
   border: 1px solid #ced4da;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   outline: none;
 }
 
+/* Buttons */
 .btn-primary {
   background-color: #007bff;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 1rem;
   border-radius: 5px;
+  width: 100%;
 }
 
 .btn-primary:hover {
@@ -42,26 +61,32 @@ input:focus, textarea:focus {
 .certificate {
   background: linear-gradient(to bottom right, #ffffff, #f3f3f3);
   border: 6px double #343a40;
-  padding: 40px;
+  padding: 2rem;
   font-family: 'Georgia', serif;
   color: #000;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .certificate h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #1a237e;
+  margin-bottom: 1rem;
 }
 
 .certificate .lead {
   font-size: 1.25rem;
-  line-height: 1.7;
-  margin-bottom: 30px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .display-4 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: #28a745;
   font-weight: 600;
 }
@@ -81,6 +106,12 @@ input:focus, textarea:focus {
 }
 
 /* Print button */
+.text-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .text-center button {
   margin-top: 20px;
   padding: 10px 25px;
@@ -102,7 +133,8 @@ input:focus, textarea:focus {
     visibility: hidden;
   }
 
-  .certificate, .certificate * {
+  .certificate,
+  .certificate * {
     visibility: visible;
   }
 
@@ -117,5 +149,30 @@ input:focus, textarea:focus {
 
   .text-center button {
     display: none;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .certificate h1 {
+    font-size: 1.75rem;
+  }
+
+  .certificate .lead {
+    font-size: 1.1rem;
+  }
+
+  .display-4 {
+    font-size: 2.2rem;
+  }
+
+  .btn-primary,
+  .text-center button {
+    font-size: 0.95rem;
+    padding: 10px 15px;
   }
 }

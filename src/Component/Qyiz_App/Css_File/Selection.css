@@ -8,13 +8,18 @@
 /* Card Styling (Bigger Size) */
 .quiz-card {
   width: 100%;
-  max-width: 1000px; /* Increased width */
+  max-width: 1000px;
   background: rgba(20, 20, 20, 0.95);
   border: 3px solid #6c63ff;
   border-radius: 2rem;
   box-shadow: 0 0 40px rgba(108, 99, 255, 0.4);
   padding: 60px 50px;
   font-size: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Title Styling */
@@ -100,4 +105,20 @@ label.form-label {
     font-size: 1rem;
     padding: 0.5rem 1.5rem;
   }
+}
+
+/* Ensure card body is a flex container for better layout control */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+/* Confirmation box buttons side by side using Flexbox (already done but reinforced) */
+.confirmation-box .d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
